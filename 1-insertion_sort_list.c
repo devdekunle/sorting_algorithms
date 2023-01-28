@@ -13,12 +13,12 @@ void insertion_sort_list(listint_t **list)
 		return;
 
 	current = (*list)->next;
-	while(current != NULL)
+	while (current != NULL)
 	{
 		/*set trailing pointer ptr and leading pointer current*/
 		ptr = current;
 		current = current->next;
-		while(ptr != NULL && ptr->prev != NULL)
+		while (ptr != NULL && ptr->prev != NULL)
 		{
 			if (ptr->prev->n > ptr->n)
 			{
