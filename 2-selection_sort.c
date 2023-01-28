@@ -1,7 +1,7 @@
 #include "sort.h"
 #include "swap.c"
 /**
-* selection_sort - sort an array using the selction sort method
+*selection_sort - sort an array using the selction sort method
 *@array: array to sort
 *@size: size of the array
 *Return: nothing
@@ -11,7 +11,7 @@ void selection_sort(int *array, size_t size)
 {
     size_t min, i, j;
 
-    if (!array)
+    if (!array || !size)
         return;
 
     /*loop through each element in the array*/
