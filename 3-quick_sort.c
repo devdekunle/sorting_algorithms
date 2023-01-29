@@ -15,10 +15,8 @@ void swap_quick(int *array, int *a, int *b, size_t size)
 
 	temp = *a;
 	*a = *b;
-	*b = temp
+	*b = temp;
 	print_array(array, size);
-
-
 }
 
 /**
@@ -31,7 +29,6 @@ void swap_quick(int *array, int *a, int *b, size_t size)
 void quick_sort(int *array, size_t size)
 {
 	quick_sort_recursion(array, 0, size - 1);
-
 }
 
 /**
