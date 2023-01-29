@@ -1,9 +1,11 @@
 #include "sort.h"
 
 /**
-*swap - swap two elements
+*swap_quick - swap two elements
 *@a: first
 *@b: second
+*@array: arr
+*@size: size of arr
 *Return: nothin
 */
 
@@ -42,6 +44,7 @@ void quick_sort(int *array, size_t size)
 void quick_sort_recursion(int *array, int low, int high)
 {
 	int pivot_index;
+
 	if (low < high)
 	{
 		pivot_index = partition(array, low, high);
@@ -66,13 +69,17 @@ int partition(int *array, int low, int high)
 {
 	int pivot_value, i, j;
 
-	/*using Nico Lomuto partition scheme
-	pivot_index should be the last element of the array*/
+	/**
+	* using Nico Lomuto partition scheme
+	* pivot_index should be the last element of the array
+	 */
 	pivot_value = array[high];
 
 
-	/*sort all elements lower than pivot_value to come before it and
-	sort all elements higher then the pivot_value to come after it*/
+	/**
+	 * sort all elements lower than pivot_value to come before it and
+	 * sort all elements higher then the pivot_value to come after it
+	 */
 
 	i = low;/*start partition from first element*/
 	for (j = low; j < high; j++)
@@ -86,6 +93,6 @@ int partition(int *array, int low, int high)
 	}
 	swap_quick(&array[i], &array[high]);
 
-	return i;
+	return (i);
 
 }
